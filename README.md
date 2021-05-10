@@ -27,7 +27,7 @@ pip install biplist pycryptodome
 
 Install directly from GitHub via `pip`:
 ```shell script
-pip install git+https://github.com/jsharkey13/iphone_backup_decrypt
+pip install git+https://github.com/KnugiHK/iphone_backup_decrypt
 # Optionally:
 pip install fastpbkdf2
 ```
