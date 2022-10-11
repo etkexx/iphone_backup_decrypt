@@ -1,6 +1,6 @@
 # iphone-backup-decrypt
 
-Decrypt an encrypted, local (i.e. non-iCloud), iPhone backup created from iOS13.
+Decrypt an encrypted, local (i.e. non-iCloud), iPhone backup created from iOS13 or newer.
 This code is mainly a [wrapper for this StackOverflow answer](https://stackoverflow.com/a/13793043),
 itself based on the [iphone-dataprotection](https://code.google.com/p/iphone-dataprotection/) code.
 
@@ -58,4 +58,10 @@ backup.extract_file(relative_path=RelativePath.CALL_HISTORY,
 # Extract all photos from the camera roll:
 backup.extract_files(relative_paths_like=RelativePathsLike.CAMERA_ROLL,
                      output_folder="./output/camera_roll")
+
+# Extract WhatsApp SQLite database and attachments:
+backup.extract_file(relative_path=RelativePath.WHATSAPP_MESSAGES,
+                    output_filename="./output/whatsapp.sqlite")
+backup.extract_files(relative_paths_like=RelativePathsLike.WHATSAPP_ATTACHMENTS,
+                     output_folder="./output/whatsapp")
 ```
